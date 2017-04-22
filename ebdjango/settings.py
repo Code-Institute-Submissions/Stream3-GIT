@@ -26,7 +26,7 @@ SECRET_KEY = 'sk_test_3CGVcNJRchvGx7zp17jBIgRD'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://ebdjango-test2.herokuapp.com/','127.0.0.1','http://291d762f.ngrok.io']
+ALLOWED_HOSTS = ['ebdjango-test2.herokuapp.com','127.0.0.1','http://291d762f.ngrok.io']
 
 
 # Application definition
