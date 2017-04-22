@@ -1,2 +1,2 @@
-web: gunicorn ebdjango.wsgi:application --setting=settings.staging
+web: gunicorn ebdjango.wsgi:application
 worker: python worker.py
