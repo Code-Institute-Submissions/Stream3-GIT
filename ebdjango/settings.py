@@ -26,7 +26,7 @@ SECRET_KEY = 'sk_test_3CGVcNJRchvGx7zp17jBIgRD'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','http://291d762f.ngrok.io']
+ALLOWED_HOSTS = ['https://ebdjango-test2.herokuapp.com/','127.0.0.1','http://291d762f.ngrok.io']
 
 
 # Application definition
@@ -189,6 +189,6 @@ TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", "js",
                                "tinymce", "tinymce.min.js")
 
 # PayPal Settings
-SITE_URL = 'http://127.0.0.1:8000'
-PAYPAL_NOTIFY_URL = ' http://291d762f.ngrok.io/a-very-hard-to-guess-url/'
+SITE_URL = 'https://ebdjango-test2.herokuapp.com/   '
+PAYPAL_NOTIFY_URL = 'https://ebdjango-test2.herokuapp.com/a-very-hard-to-guess-url/'
 PAYPAL_RECEIVER_EMAIL = 'alinechribeiro-facilitator@gmail.com'
