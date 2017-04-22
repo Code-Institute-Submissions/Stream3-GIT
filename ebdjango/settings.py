@@ -50,9 +50,9 @@ INSTALLED_APPS = [
     'paypal.standard.ipn',
     'paypal_store',
     'products',
-    'magazines',
+    #'magazines',
     'threads',
-    'polls',
+    #'polls',
     #'django-gravatar',
 ]
 DISQUS_WEBSITE_SHORTNAME = 'tastytimesblog'
