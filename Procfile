@@ -1,1 +1,1 @@
-web: gunicorn ebdjango.wsgi:application
+web: gunicorn ebdjango.wsgi
