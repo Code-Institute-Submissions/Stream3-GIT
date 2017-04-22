@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'products',
     #'magazines',
     'threads',
-    #'polls',
+    'polls',
     #'django-gravatar',
 ]
 DISQUS_WEBSITE_SHORTNAME = 'tastytimesblog'
