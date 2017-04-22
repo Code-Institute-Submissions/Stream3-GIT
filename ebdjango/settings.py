@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'paypal_store',
     'products',
     #'magazines',
-    #'threads',
+    'threads',
     #'polls',
     #'django-gravatar',
 ]
