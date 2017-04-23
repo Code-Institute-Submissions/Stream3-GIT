@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'polls',
     #'django-gravatar',
 ]
-DISQUS_API_KEY = '    0JbBjQ1JkQmnRb05eaZZFarJHJfOM6AxZsLriPOljCxYvAtu6Y8tsPf9Or44qCzE'
+DISQUS_API_KEY = '0JbBjQ1JkQmnRb05eaZZFarJHJfOM6AxZsLriPOljCxYvAtu6Y8tsPf9Or44qCzE'
 DISQUS_WEBSITE_SHORTNAME = 'ebdjango-test2.herokuapp.com'
 SITE_ID = 1
 
@@ -168,11 +168,6 @@ TEMPLATE_DIRS = (
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-#Stripe environment variables
-STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', ' pk_test_liZCnyfYKT14az1lNtQHGB2k ')
-STRIPE_SECRET = os.getenv('STRIPE_SECRET', ' sk_test_3CGVcNJRchvGx7zp17jBIgRD ')
-
-
 # Account: to tell Django we want to use this class as our User class
 AUTH_USER_MODEL = 'account.User'
  
@@ -185,6 +180,10 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 1
 STRIPE_PUBLISHABLE = "pk_test_liZCnyfYKT14az1lNtQHGB2k"
 STRIPE_SECRET = "sk_test_3CGVcNJRchvGx7zp17jBIgRD"
+
+#Stripe environment variables
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', ' pk_test_liZCnyfYKT14az1lNtQHGB2k ')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET', ' sk_test_3CGVcNJRchvGx7zp17jBIgRD ')
 
 #TinyMCE settings
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", "js",
