@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'tinymce',
     'emoticons',
     'django.contrib.sites',
-    'disqus',
+    #'disqus',
     'paypal.standard.ipn',
     'paypal_store',
     'products',
