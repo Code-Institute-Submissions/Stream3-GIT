@@ -18,14 +18,17 @@ urlpatterns = [
     url(r'^about$', main_views.get_about, name='about'),
     url(r'^register/$', account_views.register, name='register'),
     url(r'^account/$', account_views.get_index, name='index'),
+    url(r'^account/', include('account.urls')),
     url(r'^profile/$', account_views.profile, name='profile'),
     url(r'^login/$', account_views.login, name='login'),
     url(r'^logout/$', account_views.logout, name='logout'),
+
+    # PayPal
     url(r'^a-very-hard-to-guess-url/', include(paypal_urls)),
     url(r'^paypal-return', paypal_views.paypal_return),
     url(r'^paypal-cancel', paypal_views.paypal_cancel),
+
     url(r'^products/$', product_views.all_products),
-    url(r'^account/', include('account.urls')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     #url(r'^/', include('polls.urls')),
        # url(r'^polls2/', include('polls2.urls')),
