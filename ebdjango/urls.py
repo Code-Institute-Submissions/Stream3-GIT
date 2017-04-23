@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^paypal-cancel', paypal_views.paypal_cancel),
     url(r'^products/$', product_views.all_products),
     url(r'^account/', include('account.urls')),
-    #url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     #url(r'^/', include('polls.urls')),
        # url(r'^polls2/', include('polls2.urls')),
     #url(r'^now$', include('blog.urls')),
