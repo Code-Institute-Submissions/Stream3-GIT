@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load disqus_tags %}
+{% disqus_dev %}
+{% set_disqus_title post.title %}
 {% block content %}
 
 
@@ -21,12 +24,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            var idcomments_acct = '3f484dbc5568f4faf2ffd86dc82ac9fe';
-            var idcomments_post_id;
-            var idcomments_post_url;
-        </script>
-        <span id="IDCommentsPostTitle" style="display:none"></span>
-        <script type='text/javascript' src='https://www.intensedebate.com/js/genericCommentWrapperV2.js'></script>
+{% disqus_show_comments %}
 {% endblock %}
 
