@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'tinymce',
     'emoticons',
     'django.contrib.sites',
-    #'disqus',
+    'disqus',
     'paypal.standard.ipn',
     'paypal_store',
     'products',
@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'polls',
     #'django-gravatar',
 ]
-DISQUS_WEBSITE_SHORTNAME = 'tastytimesblog'
+DISQUS_WEBSITE_SHORTNAME = 'ebdjango-test2.herokuapp.com'
 SITE_ID = 1
 
 INTERNAL_IPS = ('127.0.0.1',)
