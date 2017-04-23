@@ -55,7 +55,7 @@ INSTALLED_APPS = [
     'polls',
     #'django-gravatar',
 ]
-DISQUS_API_KEY = '0JbBjQ1JkQmnRb05eaZZFarJHJfOM6AxZsLriPOljCxYvAtu6Y8tsPf9Or44qCzE'
+#DISQUS_API_KEY = '0JbBjQ1JkQmnRb05eaZZFarJHJfOM6AxZsLriPOljCxYvAtu6Y8tsPf9Or44qCzE'
 DISQUS_WEBSITE_SHORTNAME = 'ebdjango-test2.herokuapp.com'
 SITE_ID = 1
 
