@@ -24,7 +24,7 @@ def get_thanks(request):
     from_email = request.POST.get('email', '')
     if name and message and from_email:
         try:
-            send_mail(name, message, from_email, ['contact@alinechaves.com'])
+            send_mail(name, message, from_email, ['alinechribeiro@gmail.com'])
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
         return HttpResponseRedirect('/thanks')
