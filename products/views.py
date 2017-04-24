@@ -18,10 +18,10 @@ def all_products(request):
     # What you want the button to do.
     paypal_dict = {
         "business": settings.PAYPAL_RECEIVER_EMAIL,
-        "amount": self.price,
+        "amount": 3.99,
         "currency": "USD",
-        "item_name": self.name,
-        "invoice": "%s-%s" % (self.pk, uuid.uuid4()),
+        "item_name": "chocolate",
+        "invoice": "%s-%s" % (5.pk, uuid.uuid4()),
         "notify_url": settings.PAYPAL_NOTIFY_URL,
         "return_url": "%s/paypal-return" % settings.SITE_URL,
         "cancel_return": "%s/paypal-cancel" % settings.SITE_URL
