@@ -6,7 +6,7 @@
         <div class="jumbotron">
             <h1>{{ subject.name }}</h1>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-9">
             {% if user.is_authenticated %}
                 <p>
                     <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
