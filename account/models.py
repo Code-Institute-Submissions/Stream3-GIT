@@ -4,13 +4,13 @@ from django.db import models
 from django.utils import timezone
 
 # Create your models here.
-class UserProfile(models.Model):
+# class UserProfile(models.Model):
   #This field is required. 
-  user = models.OneToOneField(User)
+ #  user = models.OneToOneField(User)
 
   #Other fields here
-  name = models.CharField(max_length=50)
-  address = models.CharField(max_length=50)
+ #  name = models.CharField(max_length=50)
+ #  address = models.CharField(max_length=50)
  
 class AccountUserManager(UserManager):
     def _create_user(self, username, email, password,
