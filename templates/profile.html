@@ -15,8 +15,6 @@
 
                         {% for post in posts %}
                             {% if user.id == post.author_id %}
-
-                                <p>Your Post</p>
                                     <div class="row">
                                         <div class="col-md-10 col-sm-9 col-lg-8">
                                             <h4>{{ post.title }}</h4>
