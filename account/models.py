@@ -38,7 +38,7 @@ class AccountUserManager(UserManager):
  
         return user
  
-"""class User(AbstractUser):
+class User(AbstractUser):
     objects = AccountUserManager()
  
     def is_subscribed(self, magazine):
