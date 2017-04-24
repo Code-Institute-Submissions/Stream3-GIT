@@ -11,7 +11,8 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <p>Hello {{ user.username }}, you are welcome.</p>
                     <p>This is your Profile page. You last logged in at {{ user.last_login }}.</p>
-
+                        <p>Your Posts</p>
+                </div>
                         {% for post in posts %}
                             {% if user.id == post.author_id %}
                                     <div class="row">
