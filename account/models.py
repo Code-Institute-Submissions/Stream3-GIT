@@ -48,4 +48,4 @@ class User(AbstractUser):
         if purchase.subscription_end > timezone.now():
             return False
  
-        return True"""
+        return True
