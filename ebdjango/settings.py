@@ -193,3 +193,4 @@ TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", "js",
 SITE_URL = 'https://ebdjango-test2.herokuapp.com/   '
 PAYPAL_NOTIFY_URL = 'https://ebdjango-test2.herokuapp.com/a-very-hard-to-guess-url/'
 PAYPAL_RECEIVER_EMAIL = 'alinechribeiro-facilitator@gmail.com'
+PAYPAL_TEST = True
