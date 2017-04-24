@@ -9,9 +9,9 @@
     <div class="container">
         <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <p>Hello {{ user.username }}, you are welcome.</p>
-                    <p>This is your Profile page. You last logged in at {{ user.last_login }}.</p>
-                        <p>Your Posts</p>
+                    <h2>Hello {{ user.username }}, you are welcome.</h2>
+                    <h3>This is your Profile page. You last logged in at {{ user.last_login }}.</h3>
+                        <h2>Your Posts</h2>
                 </div>
                         {% for post in posts %}
                             {% if user.id == post.author_id %}
