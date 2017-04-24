@@ -28,7 +28,7 @@ ebjango project origins the follow Apps:
 	   	  |		|__Profile
 	   	  |
 	   	  |__Register/Profile
-
+test
 ** This is a project based on Python with the followed templates and separated apps:
 
 @pp >> Blog app: a separated app designed to the Blog's owner be able to publish many articles and receive comments from anyone at the end of each article. It was provided by Disqus (source: disqus.com, a publisher tool that creates a comment area for readers).
