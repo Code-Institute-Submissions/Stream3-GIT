@@ -11,6 +11,13 @@
     clear: both;
     display: table;
 }
+#disqus_thread {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height:20%;
+}
+
 #logo {
     display: block;
     position: absolute;
