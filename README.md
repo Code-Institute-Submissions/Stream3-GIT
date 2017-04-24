@@ -30,7 +30,7 @@ ebjango project origins the follow Apps:
 	   	  |__Register/Profile
 test
 ** This is a project based on Python with the followed templates and separated apps:
-
+@pp >> Account app: 
 @pp >> Blog app: a separated app designed to the Blog's owner be able to publish many articles and receive comments from anyone at the end of each article. It was provided by Disqus (source: disqus.com, a publisher tool that creates a comment area for readers).
 As all the other apps on this project, it is using the base.html template. 
 
@@ -47,11 +47,18 @@ Plugins activated on this Forum app:
 @pp >> Products: it was designed to allow the purchase of products by users logged in. The Products table shows an image of the product, its name, price, description and a button to PayPal purchase.
 The PayPal button is obviously linked just with Sandbox because it is just to illustrate PayPal integration. More info about how to use PayPal Integration to production environment can be seen on http://django-paypal.readthedocs.io/en/stable/standard/ipn.html
 
-@pp >> Login/Logout: those templates are designed to distinct the users that are logged in to permit purchases, new threads and posts. The Profile template appears only when the user is logged in.
+@pp >> Login/Logout: those templates are designed to distinct the users that are logged in to permit purchases, new threads and posts. The Profile template appears only when the user is logged in. Logout just appears when the user are logged in and the contrary happens to Login.
 
 @pp >> Register: this template allows the registration of a new user. Stripe: 
 Note: Using Python3 where the command "xrange" has became "range".
+
+@pp >> Main: this app contains special functions to the project as it is responsible to important views to render as the views: get_about, get_index, get_thanks and get_contact.
+
 ## Tests ##
+	* The test is necessary to check if a url resolves to the correct view function and that the view shows the right information. The main app contains in tests.py example of testing using django TestCase when a copy is just temporarily made and destroyed to check if the url is resolving the correct page.
+
+##Database
+	* The database used to this project locally and hosted to Heroku was SQLite3.
 
 ## Deployment ##
 	* This app was deployed on heroku: https://ebdjango-test2.herokuapp.com/
