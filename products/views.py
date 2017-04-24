@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Product
 from paypal.standard.forms import PayPalPaymentsForm
+from django.conf import settings
 
 
 def all_products_bkp(request):
