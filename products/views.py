@@ -3,11 +3,11 @@ from .models import Product
 from paypal.standard.forms import PayPalPaymentsForm
 
 
-def all_products(request):
-    pagetitle = "Products"
-    subtitle = "Take a look into all products"
-    products = Product.objects.all()
-    return render(request, "products/products.html", {"products": products, "pagetitle": pagetitle, "subtitle": subtitle})
+##def all_products(request):
+##    pagetitle = "Products"
+##    subtitle = "Take a look into all products"
+##    products = Product.objects.all()
+#    return render(request, "products/products.html", {"products": products, "pagetitle": pagetitle, "subtitle": subtitle})
 
 @property
 def paypal_form(self):
