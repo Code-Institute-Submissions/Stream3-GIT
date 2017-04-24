@@ -1,8 +1,21 @@
+from django.contrib.auth.models import User
 from django.contrib.auth.models import AbstractUser, UserManager
 from django.db import models
 from django.utils import timezone
 
 # Create your models here.
+class UserProfile(models.Model):
+  #This field is required. 
+  user = models.OneToOneField(User)
+
+  #Other fields here
+  name = models.CharField(max_length=50)
+  address = models.CharField(max_length=50)
+  image = models.ImageField(upload_to="images", blank=True, null=True)
+  """docstring for UserProfile"models.Modelef __init__(self, arg):
+    super(UserProfile,models.Model.__init__()
+    self.arg = arg"""
+
 class AccountUserManager(UserManager):
     def _create_user(self, username, email, password,
                      is_staff, is_superuser, **extra_fields):
@@ -25,7 +38,7 @@ class AccountUserManager(UserManager):
  
         return user
  
-class User(AbstractUser):
+"""class User(AbstractUser):
     objects = AccountUserManager()
  
     def is_subscribed(self, magazine):
@@ -37,4 +50,4 @@ class User(AbstractUser):
         if purchase.subscription_end > timezone.now():
             return False
  
-        return True
+        return True"""
