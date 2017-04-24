@@ -8,7 +8,8 @@
         </div>
     </div>
     <div class="col-md-12">
-        <div class="pull-right">
+        <!--div class="pull-right"-->
+        <div>
             {% if post.user == user or user.is_staff %}
                 <a href="{% url 'edit_post' thread.id post.id %}">
                 <!--font-awesome icons (CSS classes)-->
