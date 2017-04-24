@@ -21,7 +21,7 @@ def all_products(request):
         "amount": 3.99,
         "currency": "USD",
         "item_name": "chocolate",
-        "invoice": "%s-%s" % (5.pk, uuid.uuid4()),
+        "invoice": "%s-%s" % (5, uuid.uuid4()),
         "notify_url": settings.PAYPAL_NOTIFY_URL,
         "return_url": "%s/paypal-return" % settings.SITE_URL,
         "cancel_return": "%s/paypal-cancel" % settings.SITE_URL
