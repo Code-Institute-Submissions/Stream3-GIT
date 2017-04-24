@@ -19,6 +19,10 @@ def get_index(request):
     # now return the rendered template
     return render(request, 'index.html', {'pagetitle':pagetitle, 'subtitle':subtitle})
 
+def profile(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    return render(request, 'profile.html', {'posts': posts})
+
 def register(request):
     pagetitle = "Register"
     if request.method == 'POST':
@@ -58,11 +62,6 @@ def register(request):
     args.update(csrf(request))
 
     return render(request, 'register.html', args)
-
-def profile(request):
-    pagetitle= "Profile"
-    subtitle= "This page is available after login succeded."
-    return render(request, 'profile.html', {'pagetitle': pagetitle, 'subtitle':subtitle})
 
 def login(request):
     pagetitle="Login"
