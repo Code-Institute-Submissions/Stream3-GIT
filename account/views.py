@@ -90,9 +90,9 @@ def login(request):
 
 @login_required(login_url='/login/')
 def profile(request):
+    pagetitle = "Profile Page"
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    return render(request, 'profile.html', {'posts': posts})
-#    return render(request, 'profile.html')
+    return render(request, 'profile.html', {'pagetitle': pagetitle, 'posts': posts})
 
 def logout(request):
     auth.logout(request)
