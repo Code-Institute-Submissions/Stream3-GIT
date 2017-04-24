@@ -31,3 +31,6 @@ def all_products(request):
     form = PayPalPaymentsForm(initial=paypal_dict)
     args = {"form": form, "products": products, "pagetitle": pagetitle, "subtitle": subtitle}
     return render(request, "products/products.html", args)
+
+def __unicode__(self):
+    return self.name
