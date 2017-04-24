@@ -60,6 +60,9 @@ Note: Using Python3 where the command "xrange" has became "range".
 
 @pp >> Main: this app contains special functions to the project as it is responsible to important views to render as the views: get_about, get_index, get_thanks and get_contact.
 
+##PayPal
+	* The Sandbox was used as a solution to offer products do buy. A button was created but it is just valid when the user are already logged in (requires authentication). After that, the webpage redirects to the PayPal environment with details of the purchase.
+
 ## Tests ##
 	* The test is necessary to check if a url resolves to the correct view function and that the view shows the right information. The main app contains in tests.py example of testing using django TestCase when a copy is just temporarily made and destroyed to check if the url is resolving the correct page.
 
