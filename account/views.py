@@ -23,7 +23,8 @@ def get_index(request):
 
 def profile(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    return render(request, 'profile.html', {'posts': posts})
+    pagetitle = "Profile Page"
+    return render(request, 'profile.html', {'posts': posts, 'pagetitle': pagetitle})
 
 def register(request):
     pagetitle = "Register"
