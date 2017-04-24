@@ -16,12 +16,12 @@ class Post(models.Model):
   image = models.ImageField(upload_to="images", blank=True, null=True)
 
   def publish(self):
-  	self.published_date = timezone.now()
-  	#self.created= timezone.now()
-  	self.save()
+    self.published_date = timezone.now()
+    #self.created= timezone.now()
+    self.save()
 
   def __unicode__(self):
-  	return self.title
+    return self.title
 
 class Meta:
   ordering = ['-created']
@@ -33,17 +33,17 @@ def get_absolute_url(self):
   return reverse('blog.views.post', args=[self.slug])
 
 class Contact(models.Model):
-	#class Meta: #include this to ensure build in IDE
-	#	app_label = "blog" 
-	first_name = models.CharField(max_length=255)
-	last_name = models.CharField(max_length=255)
-	mobile = models.CharField(max_length=20)
+  #class Meta: #include this to ensure build in IDE
+  #	app_label = "blog" 
+  first_name = models.CharField(max_length=255)
+  last_name = models.CharField(max_length=255)
+  mobile = models.CharField(max_length=20)
 
-	def __str__(self):
-		return ' '.join([
-			self.first_name,
-			self.last_name,
-		])
+  def __str__(self):
+    return ' '.join([
+      self.first_name,
+      self.last_name,
+    ])
 
 #class Interview(models.Model):
   #author = models.ForeignKey('auth.User', blank=True, default=1, null=True)
@@ -52,12 +52,10 @@ class Contact(models.Model):
   #description = models.CharField(max_length=255)
   #content = models.TextField()
 
-  def publish(self):
-  	self.published_date = timezone.now()
-  	#self.created= timezone.now()
-  	self.save()
+def publish(self):
+    self.published_date = timezone.now()
+    #self.created= timezone.now()
+    self.save()
 
   def __unicode__(self):
-  	return self.title
-
-#
+    return self.title
