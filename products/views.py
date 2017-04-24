@@ -1,3 +1,4 @@
+import uuid
 from django.shortcuts import render
 from .models import Product
 from paypal.standard.forms import PayPalPaymentsForm
