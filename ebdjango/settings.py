@@ -48,7 +48,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'paypal.standard.ipn',
     'paypal_store',
-    'stripe',
     'products',
     'threads',
     'polls',

@@ -88,7 +88,9 @@ def login(request):
 
 @login_required(login_url='/login/')
 def profile(request):
-    return render(request, 'profile.html')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    return render(request, 'profile.html', {'posts': posts})
+#    return render(request, 'profile.html')
 
 def logout(request):
     auth.logout(request)
