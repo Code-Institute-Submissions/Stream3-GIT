@@ -18,21 +18,21 @@ def get_about(request):
 	return render(request, 'about.html', {"pagetitle": pagetitle})
 
 
-def get_thanks(request):
-    name = request.POST.get('name', '')
-    message = request.POST.get('message', '')
-    from_email = request.POST.get('email', '')
-    if name and message and from_email:
-        try:
-            send_mail(name, message, from_email, ['alinechribeiro@gmail.com'])
-        except BadHeaderError:
-            return HttpResponse('Invalid header found.')
-        return HttpResponseRedirect('/thanks')
-    else:
-        # In reality we'd use a form class
-        # to get proper validation errors.
-        return HttpResponse('Make sure all fields are entered and valid.')
+##def get_thanksbkp(request):
+##    name = request.POST.get('name', '')
+#    message = request.POST.get('message', '')
+#    from_email = request.POST.get('email', '')
+#    if name and message and from_email:
+#        try:
+#            send_mail(name, message, from_email, ['alinechribeiro@gmail.com'])
+#        except BadHeaderError:
+#            return HttpResponse('Invalid header found.')
+#        return HttpResponseRedirect('/thanks')
+#    else:
+#        # In reality we'd use a form class
+#        # to get proper validation errors.
+#        return HttpResponse('Make sure all fields are entered and valid.')
 
-def get_thanks2(request):
+def get_thanks(request):
 	pagetitle = "Thank you"
 	return render(request, 'thanks.html', {"pagetitle": pagetitle})
