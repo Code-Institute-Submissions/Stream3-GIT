@@ -15,16 +15,15 @@ stripe.api_key = settings.STRIPE_SECRET
 
 # Create your views here.
 def get_index(request):
-    #variables to @media image
     pagetitle = "Tasty Times"
     subtitle = "Enjoy it."
     # now return the rendered template
     return render(request, 'index.html', {'pagetitle':pagetitle, 'subtitle':subtitle})
 
 def profile(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     pagetitle = "Profile Page"
-    return render(request, 'profile.html', {'posts': posts, 'pagetitle': pagetitle})
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+    return render(request, 'profile.html', {'pagetitle': pagetitle, 'posts': posts})
 
 def register(request):
     pagetitle = "Register"
