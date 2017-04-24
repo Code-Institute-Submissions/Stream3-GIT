@@ -10,8 +10,7 @@ class Product(models.Model):
     name = models.CharField(max_length=254, default='')
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
-#can also create a field for images here for example.
-    #image = models.ImageField(upload_to="images", blank=True, null=True)
+#can also create a field for product images here for example.
     image = models.ImageField(upload_to="images", blank=True, null=True)
 
 @property

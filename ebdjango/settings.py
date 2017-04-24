@@ -46,14 +46,11 @@ INSTALLED_APPS = [
     'tinymce',
     'emoticons',
     'django.contrib.sites',
-    #'disqus',
     'paypal.standard.ipn',
     'paypal_store',
     'products',
-    #'magazines',
     'threads',
     'polls',
-    #'django-gravatar',
 ]
 DISQUS_API_KEY = '0JbBjQ1JkQmnRb05eaZZFarJHJfOM6AxZsLriPOljCxYvAtu6Y8tsPf9Or44qCzE'
 DISQUS_WEBSITE_SHORTNAME = 'ebdjango-test2.herokuapp.com'

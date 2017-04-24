@@ -11,10 +11,8 @@ class UserProfile(models.Model):
   #Other fields here
   name = models.CharField(max_length=50)
   address = models.CharField(max_length=50)
+  #can also create a field for User image:
   image = models.ImageField(upload_to="images", blank=True, null=True)
-  """docstring for UserProfile"models.Modelef __init__(self, arg):
-    super(UserProfile,models.Model.__init__()
-    self.arg = arg"""
 
 class AccountUserManager(UserManager):
     def _create_user(self, username, email, password,
