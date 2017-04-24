@@ -24,7 +24,6 @@ urlpatterns = [
     url(r'^logout/$', account_views.logout, name='logout'),
 
     # PayPal
-    url(r'^paypal/', include('paypal.standard.ipn.urls')),
     url(r'^a-very-hard-to-guess-url/', include(paypal_urls)),
     url(r'^paypal-return', paypal_views.paypal_return),
     url(r'^paypal-cancel', paypal_views.paypal_cancel),
