@@ -26,43 +26,27 @@ def profile(request):
     return render(request, 'profile.html', {'pagetitle': pagetitle, 'posts': posts})
 
 def register(request):
-    pagetitle = "Register"
     if request.method == 'POST':
         form = UserRegistrationForm(request.POST)
         if form.is_valid():
-            try:
-                customer = stripe.Customer.create(
-                email=form.cleaned_data['email'],
-                card=form.cleaned_data['stripe_id'],  # this is currently the card token/id
-                plan='REG_MONTHLY',
-        )
-            except stripe.error.CardError as e:
-                messages.error(request, "Your card was declined")
-
-            if customer:
-                    user = form.save()
-                    user.stripe_id = customer.id
-                    user.subscription_end = arrow.now().replace(weeks=+4).datetime
-                    user.save()
+            form.save()
+ 
+            user = auth.authenticate(email=request.POST.get('email'),
+                                     password=request.POST.get('password1'))
+ 
             if user:
-                    auth.login(request, user)
-                    messages.success(request, "You have successfully reqistered")
-                    return redirect(reverse('profile'))
-
-
+                messages.success(request, "You have successfully registered")
+                return redirect(reverse('profile'))
+ 
             else:
-                    messages.error(request, "unable to log you in at this time")
-        else:
-
-                messages.error(request, "We were unable to take a payment with that card!")
-
+                messages.error(request, "unable to log you in at this time!")
+ 
     else:
-        today = datetime.date.today()
         form = UserRegistrationForm()
-
-    args = {'form': form, 'publishable': settings.STRIPE_PUBLISHABLE, "pagetitle": pagetitle}
+ 
+    args = {'form': form}
     args.update(csrf(request))
-
+ 
     return render(request, 'register.html', args)
 
 def login(request):

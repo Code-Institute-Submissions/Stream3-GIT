@@ -33,6 +33,7 @@ test
 @pp >> Account app and User Authentication: this app is responsible for User Authentication using email and password.
 	- Views contains login, logout, register and Profile page.
 		-> Login area presents unique pages that just users logged in can view: profile page, posts and possibility to new posts with polls and logout option.
+	- backends.py: this file is responsible to allow/disallow login and will hold our code to check if the email and password are correct.
 	- The AbstractUser brings user attributes
 	- The User Manager controls registration
 	- The django_forms_bootstrap renders the form on the register page. 
@@ -68,6 +69,7 @@ Note: Using Python3 where the command "xrange" has became "range".
 
 ##Database
 	* The database used to this project locally and hosted to Heroku was SQLite3.
+##Version Control on GitHub
 
 ## Deployment ##
 	* This app was deployed on heroku: https://ebdjango-test2.herokuapp.com/

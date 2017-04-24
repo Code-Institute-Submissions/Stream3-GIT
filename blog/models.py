@@ -45,12 +45,12 @@ class Contact(models.Model):
 			self.last_name,
 		])
 
-class Interview(models.Model):
+#class Interview(models.Model):
   #author = models.ForeignKey('auth.User', blank=True, default=1, null=True)
-  title = models.CharField(max_length=255)
-  slug = models.SlugField(unique=True, max_length=255)
-  description = models.CharField(max_length=255)
-  content = models.TextField()
+ # title = models.CharField(max_length=255)
+  #slug = models.SlugField(unique=True, max_length=255)
+  #description = models.CharField(max_length=255)
+  #content = models.TextField()
 
   def publish(self):
   	self.published_date = timezone.now()
