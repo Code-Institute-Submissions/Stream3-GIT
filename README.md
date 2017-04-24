@@ -30,7 +30,13 @@ ebjango project origins the follow Apps:
 	   	  |__Register/Profile
 test
 ** This is a project based on Python with the followed templates and separated apps:
-@pp >> Account app: 
+@pp >> Account app and User Authentication: this app is responsible for User Authentication using email and password.
+	- Views contains login, logout, register and Profile page.
+		-> Login area presents unique pages that just users logged in can view: profile page, posts and possibility to new posts with polls and logout option.
+	- The AbstractUser brings user attributes
+	- The User Manager controls registration
+	- The django_forms_bootstrap renders the form on the register page. 
+	- After the Register page suceeded the Profile Page is shown.
 @pp >> Blog app: a separated app designed to the Blog's owner be able to publish many articles and receive comments from anyone at the end of each article. It was provided by Disqus (source: disqus.com, a publisher tool that creates a comment area for readers).
 As all the other apps on this project, it is using the base.html template. 
 
