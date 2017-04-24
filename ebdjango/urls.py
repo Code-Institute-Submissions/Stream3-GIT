@@ -30,7 +30,7 @@ urlpatterns = [
 
     url(r'^products/$', product_views.all_products),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
-    #url(r'^/', include('polls.urls')),
+    url(r'^/', include('polls.urls')),
        # url(r'^polls2/', include('polls2.urls')),
     #url(r'^now$', include('blog.urls')),
     #url(r'^(?P<slug>[\w\-]+)/$', include('blog.views.post')),
