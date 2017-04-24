@@ -12,7 +12,6 @@
                     <h2>Hello {{ user.username }}, you are welcome.</h2>
                     <h3>This is your Profile page. You last logged in at {{ user.last_login }}.</h3>
                         <h2>Your Posts</h2>
-                </div>
                         {% for post in posts %}
                             {% if user.id == post.author_id %}
                                     <div class="row">
