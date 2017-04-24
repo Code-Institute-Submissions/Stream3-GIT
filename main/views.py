@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 #from django.contrib.auth.decorators import login_required
@@ -36,3 +36,10 @@ def get_about(request):
 def get_thanks(request):
 	pagetitle = "Thank you"
 	return render(request, 'thanks.html', {"pagetitle": pagetitle})
+    
+#Testing the url
+def test_check_content_is_correct(self):
+    home_page = self.client.get('/')
+    self.assertTemplateUsed(home_page, "index.html")
+    home_page_template_output = render_to_response("index.html").content
+    self.assertEqual(home_page.content, home_page_template_output)

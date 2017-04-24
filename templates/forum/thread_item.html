@@ -5,7 +5,7 @@
                 <tr>
                     <td class="text-center">
                         <a href="{% url 'thread' thread.id %}">
-                            <h4>{{ thread.name }}</h4>
+                            <h4>{{ thread.name }} (at {{ thread.created_at }})</h4>
                             <p>This thread is available. Read all about it.</p>
                         </a>
                     </td>

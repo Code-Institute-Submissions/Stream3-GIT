@@ -50,7 +50,7 @@ The PayPal button is obviously linked just with Sandbox because it is just to il
 @pp >> Login/Logout: those templates are designed to distinct the users that are logged in to permit purchases, new threads and posts. The Profile template appears only when the user is logged in.
 
 @pp >> Register: this template allows the registration of a new user. Stripe: 
-Note: Using Python3 where "xrange" has become "range".
+Note: Using Python3 where the command "xrange" has became "range".
 ## Tests ##
 
 ## Deployment ##

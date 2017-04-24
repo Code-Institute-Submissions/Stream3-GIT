@@ -10,13 +10,11 @@
 
 {% for subject in subjects %}
 <section class="subject">
-    <h2><a href="{% url 'threads' subject.id %}">{{ subject.name }}</a></h2>
+    <a href="{% url 'threads' subject.id %}"><h2>{{ subject.name }}</h2></a>
     <p>
-        <a href="{% url 'threads' subject.id %}">
             {% autoescape off %}
             {{ subject.description }}
             {% endautoescape %}
-        </a>
     </p>
     <div class="table-responsive">
         <table class="table forum table-sm">
