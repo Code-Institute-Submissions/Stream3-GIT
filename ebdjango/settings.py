@@ -161,7 +161,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Account: to tell Django we want to use this class as our User class
 AUTH_USER_MODEL = 'account.User'
- ##settings.AUTH_USER_MODEL
+
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'account.backends.EmailAuth',
