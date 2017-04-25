@@ -69,7 +69,8 @@ Note: Using Python3 where the command "xrange" has became "range".
 
 ##Database
 	* The database used to this project locally and hosted to Heroku was SQLite3.
-##Version Control on GitHub
+	
+##Version Control on GitHub: https://github.com/alinechribeiro/Stream3-GIT.git
 
 ## Deployment ##
 	* This app was deployed on heroku: https://ebdjango-test2.herokuapp.com/
