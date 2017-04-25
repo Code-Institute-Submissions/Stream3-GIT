@@ -43,10 +43,9 @@ def register(request):
  
     else:
         form = UserRegistrationForm()
- 
-    args = {'form': form}
+    pagetitle = 
+    args = {'form': form, 'pagetitle': pagetitle, 'subtitle': subtitle}
     args.update(csrf(request))
- 
     return render(request, 'register.html', args)
 
 def login(request):

@@ -3,7 +3,7 @@ Title: TastyTimes
 Navbar: links to differnt Apps
 
 Website tree:
-   ** Django framework helps you to create your own website base on MVC (Model/View/Controller) and you can create a basis for any templates to main features (all the structure that will support any new templates from your site like static styles, nav bar, etc).
+   ** This project uses Django framework which helps you to create your own website base on MVC (Model/View/Controller) and you can create a basis for any templates to main features (all the structure that will support any new templates from your site like static styles, nav bar, etc).
    * On this project the basic template is 'base.html' and the website tree is represented as below:
 
 ebjango project origins the follow Apps:
