@@ -18,7 +18,7 @@ def post(request, slug):
     # get the Post object
     post = get_object_or_404(Post, slug=slug)
     # now return the rendered template
-    return render(request, 'blog/blog_index.html', {'post': post})
+    return render(request, 'blog_index.html', {'post': post})
 
 def post_list(request):
     """
@@ -55,7 +55,7 @@ def new_post(request):
             return redirect(post_detail, post.pk)
     else:
         form = BlogPostForm()
-    return render(request, 'blog/blog_index.html',{'form': form})
+    return render(request, 'blog_index.html',{'form': form})
 
 def edit_post(request,id):
     post=get_object_or_404(Post, pk=id)
@@ -69,4 +69,4 @@ def edit_post(request,id):
             return redirect(post_detail, post.pk)
     else:
         form = BlogPostForm(instance=post)
-    return render(request, 'blog/blog_index.html',{'form': form})
+    return render(request, 'blog_index.html',{'form': form})
