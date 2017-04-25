@@ -81,7 +81,7 @@ def profile(request):
 def logout(request):
     pagetitle = "Tasty Times"
     subtitle = "Logout"
-    args = {'form':form, 'pagetitle': pagetitle, 'subtitle': subtitle}
+    args = {'pagetitle': pagetitle, 'subtitle': subtitle}
     auth.logout(request)
     messages.success(request, 'You have successfully logged out')
     return render(request, 'index.html', args)
