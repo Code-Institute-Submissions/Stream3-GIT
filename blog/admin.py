@@ -1,6 +1,5 @@
 from django.contrib import admin
 from blog.models import Post
-from blog.models import Interview
 from blog.models import Contact
 
 class PostAdmin(admin.ModelAdmin):
@@ -20,5 +19,3 @@ class PostAdmin(admin.ModelAdmin):
 admin.site.register(Post, PostAdmin)
 
 admin.site.register(Contact)
-
-admin.site.register(Interview)
