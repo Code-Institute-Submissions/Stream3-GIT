@@ -161,15 +161,21 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Account: to tell Django we want to use this class as our User class
 AUTH_USER_MODEL = 'account.User'
-
+ ##settings.AUTH_USER_MODEL
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'account.backends.EmailAuth',
 )
 
+#Stripe environment variables
+SITE_ID = 1
+STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', '')
+STRIPE_SECRET = os.getenv('STRIPE_SECRET', '')
+
 #TinyMCE settings
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", "js",
                                "tinymce", "tinymce.min.js")
+
 # PayPal Settings
 SITE_URL = 'https://ebdjango-test2.herokuapp.com/   '
 PAYPAL_NOTIFY_URL = 'https://ebdjango-test2.herokuapp.com/a-very-hard-to-guess-url/'
