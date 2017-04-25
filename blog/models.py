@@ -53,9 +53,9 @@ class Contact(models.Model):
   #content = models.TextField()
 
 def publish(self):
-    self.published_date = timezone.now()
-    #self.created= timezone.now()
-    self.save()
+  self.published_date = timezone.now()
+  #self.created= timezone.now()
+  self.save()
 
-  def __unicode__(self):
-    return self.title
+def __unicode__(self):
+  return self.title
